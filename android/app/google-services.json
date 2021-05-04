@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332208557061",
+    "project_id": "zuri-chat-1c388",
+    "storage_bucket": "zuri-chat-1c388.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332208557061:android:c05b18331524caabb2a06c",
+        "android_client_info": {
+          "package_name": "co.adeleye.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332208557061-trll7clfdjsot3d03i6uh473pk9afqnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmIjS3YbhX44C6k_R4WUkiXNivFSGd6pU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332208557061-trll7clfdjsot3d03i6uh473pk9afqnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
