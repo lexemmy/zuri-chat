@@ -78,7 +78,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       _fireStore.collection('messages').add({
                         'sender': loggedInUser.email,
                         'text': messageText,
-                        'time': FieldValue.serverTimestamp() //add this
+                        'time': FieldValue.serverTimestamp() 
                       });
                     },
                     child: Text(
@@ -102,7 +102,7 @@ class StreambuilderClass extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
         stream: _fireStore
             .collection('messages')
-            .orderBy('time', descending: false)//add this
+            .orderBy('time', descending: false)
             .snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
@@ -117,14 +117,14 @@ class StreambuilderClass extends StatelessWidget {
           for (var message in messages) {
             final messageText = message['text'];
             final messageSender = message['sender'];
-            final messageTime = message['time'] as Timestamp; //add this
+            final messageTime = message['time'] as Timestamp; 
             final currentUser = loggedInUser.email;
 
             final messageBubble = MessageBubble(
               sender: messageSender,
               text: messageText,
               isMe: currentUser == messageSender,
-              time: messageTime, //add this
+              time: messageTime,
             );
 
             messageBubbles.add(messageBubble);
@@ -144,9 +144,9 @@ class MessageBubble extends StatelessWidget {
   final String text;
   final String sender;
   final bool isMe;
-  final Timestamp time; // add this
+  final Timestamp time;
 
-  MessageBubble({this.text, this.sender, this.isMe, this.time}); //add the variable  in this constructor
+  MessageBubble({this.text, this.sender, this.isMe, this.time}); 
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -156,7 +156,7 @@ class MessageBubble extends StatelessWidget {
             isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            ' $sender ${DateTime.now().hour.toString() + ':' + DateTime.now().minute.toString()}',// add this only if you want to show the time along with the email. If you dont want this then don't add this DateTime thing
+            ' $sender ${DateTime.now().hour.toString() + ':' + DateTime.now().minute.toString()}', //TODO: update time format
             style: TextStyle(color: Colors.black54, fontSize: 12),
           ),
           Material(
